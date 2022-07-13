@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'controller.dart';
-import 'page_module.dart';
 
 class PageThree extends StatefulWidget {
   const PageThree({Key? key}) : super(key: key);

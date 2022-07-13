@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test2/controller.dart';
-import 'package:test2/page1.dart';
-import 'package:test2/page2.dart';
-import 'package:test2/page3.dart';
+import 'package:test2/native_navigator/presenter/controller.dart';
+
+import 'presenter/page_one.dart';
+import 'presenter/page_three.dart';
+import 'presenter/page_two.dart';
 
 class PageModule extends StatefulWidget {
   const PageModule({Key? key}) : super(key: key);
@@ -20,9 +21,6 @@ class _PageModuleState extends State<PageModule> {
         return PageGlobalController(0);
       },
       child: Navigator(
-        // [
-        //   MaterialPageRoute(builder: (context) => const PageOne()),
-        // ],
         onGenerateInitialRoutes: Navigator.defaultGenerateInitialRoutes,
         onGenerateRoute: (settings) {
           if (settings.name == '/') {
